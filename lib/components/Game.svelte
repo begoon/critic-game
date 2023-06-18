@@ -97,12 +97,10 @@
                 class="circle"
                 class:killed={image.killed}
                 on:mousedown={() => kill(image)}
-                style:left="{image.x}px"
-                style:top="{image.y}px"
+                style:translate="{image.x}px {image.y}px"
                 bind:this={image.ref}
             >
-                <!-- svelte-ignore a11y-missing-attribute -->
-                <img src={image.href} class="rounded" />
+                <img src={image.href} alt="" draggable="false" />
             </div>
         {/each}
     </div>
